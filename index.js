@@ -1,12 +1,38 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const generateMD = (answers) =>
+  `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">${answers.name}</h1>
+    <div class= "line">
+    <p class="lead">I am from ${answers.location}.</p>
+    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <ul class="list-group">
+      <li class="list-group-item">My GitHub username is ${answers.github}</li>
+      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>`;
+
 inquirer
   .prompt([
     {
       type: 'input',
-      name: 'name',
-      message: 'What is the name of the project?',
+      name: 'Title',
+      message: 'What is the  of the project?',
     },
     {
         type: 'input',
@@ -31,10 +57,10 @@ inquirer
       choices: ['email', 'phone', 'telekinesis'],
     },
   ])
-  .then((data) => {
-    const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+  .then((answers) => {
+    const htmlPageContent = generateMD(answers);
 
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('Success!')
+    fs.writeFile('index.html', htmlPageContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created index.html!')
     );
   });

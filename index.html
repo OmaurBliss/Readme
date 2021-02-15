@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .line {
+        border-top: 3px solid black;
+      }
+      .jumbotron {
+        border: 2px black;
+      }
+    </style>
+
+    <div class="container jumbotron jumbotron-fluid">
+      <h1 class="display-4">${answers.name}</h1>
+    </div>
+    <div class="container">
+      <div class="line"></div>
+      <br />
+      <h1 class="display-4">
+        Description:</h1>
+        <br />
+        <p>${answers.name}</p>
+      <div class="line"></div>
+      <br />
+      <h1 class="display-4">
+        Table of Contents:</h1>
+        <br />
+        <p>${answers.name}</p>
+      <div class="line"></div>
+      <br />
+      <h1 class="display-4">
+        Instillation Instructions:</h1>
+        <br />
+        <p>${answers.name}</p>
+      <div class="line"></div>
+      <br />
+      <h1 class="display-4">
+        Usage:</h1>
+        <br />
+        <p>${answers.name}</p>
+      <div class="line"></div>
+      <h1 class="display-4">${answers.name}</h1>
+      <p class="lead">I am from ${answers.location}.</p>
+      <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+      <ul class="list-group">
+        <li class="list-group-item">My GitHub username is ${answers.github}</li>
+        <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+      </ul>
+    </div>
+  </body>
+</html>
