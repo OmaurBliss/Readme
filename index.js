@@ -31,7 +31,7 @@ inquirer
   .prompt([
     {
       type: 'input',
-      name: 'Title',
+      name: 'title',
       message: 'What is the  of the project?',
     },
     {
@@ -42,25 +42,35 @@ inquirer
       {
         type: 'input',
         name: 'installation instructions',
-        message: 'What are installation instructions?',
+        message: 'What are the app installation instructions?',
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'Use this space to show examples of how this project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources',
+      },
+      {
+        type: 'input',
+        name: 'Contributions',
+        message: 'Who has contributed to creating this application?',
       },
     {
       type: 'checkbox',
-      message: 'What languages do you know?',
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+      message: 'What is the license for this application',
+      name: 'license',
+      choices: ['MIT', 'ISL', 'JavaScript', 'MySQL'],
     },
     {
       type: 'list',
       message: 'What is your preferred method of communication?',
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
+      name: 'Questions',
+      choices: ['email', 'phone', 'social media'],
     },
   ])
   .then((answers) => {
-    const htmlPageContent = generateMD(answers);
+    const readmePageContent = generateMD(answers);
 
-    fs.writeFile('index.html', htmlPageContent, (err) =>
+    fs.writeFile('README.md', readmePageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created index.html!')
     );
   });
