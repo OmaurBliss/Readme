@@ -71,6 +71,6 @@ inquirer
     const readmePageContent = generateMD(answers);
 
     fs.writeFile('README.md', readmePageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+      err ? console.log(err) : console.log('Successfully created README.md!')
     );
   });
