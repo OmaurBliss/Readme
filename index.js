@@ -3,7 +3,21 @@ const fs = require('fs');
 
 const generateMD = (answers) =>
 
+// if (answers.licence === 'MIT'){
+    
+// const mitLicense = [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+// answers.license = mitLicense;
+// } else if (answers.license === 'ISC') {
+//     const iscLicense = [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+//     answers.license = iscLicense
+// } else if (answers.license === 'MOZILLA'){
 
+//     const mozillaLicense = [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+// answers.license = mozillaLicense
+// } else if (answers.license = 'ARTISTIC LICENSE'){
+//     const artisticLicense = [![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+//     answers.license = artisticLicense
+// })
 
   `
   # ${answers.name}
@@ -74,6 +88,23 @@ const generateMD = (answers) =>
   <https://${answers.github}>
 
   `;
+
+//   if (answers.licence === 'MIT'){
+    
+//     const mitLicense = [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+//     answers.license = mitLicense;
+//     } else if (answers.license === 'ISC') {
+//         const iscLicense = [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+//         answers.license = iscLicense
+//     } else if (answers.license === 'MOZILLA'){
+    
+//         const mozillaLicense = [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+//     answers.license = mozillaLicense
+//     } else if (answers.license = 'ARTISTIC LICENSE'){
+//         const artisticLicense = [![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+//         answers.license = artisticLicense
+//     }
+    
 
 inquirer
   .prompt([
