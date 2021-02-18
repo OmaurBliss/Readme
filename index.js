@@ -20,20 +20,28 @@ const generateMD = (answers) =>
 // })
 
   `
-  # TITLE: ${answers.name}
+  # TITLE: ${answers.title}
 
   ---
 
   # Table of contents
 
   [Title](#--answersname-)
+
 [Description](#description)
+
 [Installation Instructions](#installation-instructions)
+
 [Usage](#usage)
-          + [Screenshots of application](#screenshots-of-application)
+
++ [Screenshots of application](#screenshots-of-application)
+
 [Contributions](#contributions)
+
 [License](#license)
+
 [Tests](#tests)
+
 [Questions](#questions)
 
   # Description
@@ -75,7 +83,7 @@ const generateMD = (answers) =>
 
   # Tests
 
-  ${answers.text}
+  ${answers.tests}
 
   ---
 
