@@ -2,37 +2,51 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateMD = (answers) =>
-  `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
 
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">${answers.name}</h1>
-    <div class= "line">
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
+  `
+  #${answers.name}
+
+  ---
+  #Description
+
+  ${answers.description}
+
+  ---
+  #Installation Instructions
+
+  ${answers.installation}
+
+  ---
+  #Usage
+
+  ${answers.usage}
+  ######Screenshots of application
+
+  ![${answers.alttextone}](${answers.imagelinkone})
+
+  ![${answers.alttexttwo}](${answers.imagelinktwo})
+
+  ![${answers.alttextthree}](${answers.imagelinkthree})
+
+  ---
+  #Contributions
+
+  ${answers.contributions}
+
+  ---
+  #License
+
+  ${answers.license}
+
+
+  `;
 
 inquirer
   .prompt([
     {
       type: 'input',
       name: 'title',
-      message: 'What is the  of the project?',
+      message: 'What is the title of the project?',
     },
     {
         type: 'input',
@@ -41,31 +55,70 @@ inquirer
       },
       {
         type: 'input',
-        name: 'installation instructions',
-        message: 'What are the app installation instructions?',
+        name: 'installation',
+        message: 'What are the application installation instructions?',
       },
       {
         type: 'input',
         name: 'usage',
-        message: 'Use this space to show examples of how this project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources',
+        message: 'Explain how your application will be used',
       },
       {
         type: 'input',
-        name: 'Contributions',
+        name: 'imagelinkone',
+        message: 'Enter url of screenshot 1',
+      },
+      {
+        type: 'input',
+        name: 'alttextone',
+        message: 'Enter image text',
+      },
+      {
+        type: 'input',
+        name: 'imagelinktwo',
+        message: 'Enter url of screenshot 2',
+      },
+      {
+        type: 'input',
+        name: 'alttexttwo',
+        message: 'Enter image text for screenshot 2',
+      },
+      {
+        type: 'input',
+        name: 'imagelinkthree',
+        message: 'Enter url of screenshot 3',
+      },
+      {
+        type: 'input',
+        name: 'alttextthree',
+        message: 'Enter image text for screenshot 3',
+      },
+      {
+        type: 'input',
+        name: 'contributions',
         message: 'Who has contributed to creating this application?',
       },
     {
       type: 'checkbox',
       message: 'What is the license for this application',
       name: 'license',
-      choices: ['MIT', 'ISL', 'JavaScript', 'MySQL'],
+      choices: ['MIT', 'ISC', 'MOZILLA', 'ARTISTIC LICENSE'],
     },
     {
-      type: 'list',
-      message: 'What is your preferred method of communication?',
-      name: 'Questions',
-      choices: ['email', 'phone', 'social media'],
-    },
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address',
+      },
+      {
+        type: 'input',
+        name: 'contactquestions',
+        message: 'What are instructions for contacting you with additional questions?',
+      },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your Github URL?',
+      },
   ])
   .then((answers) => {
     const readmePageContent = generateMD(answers);
