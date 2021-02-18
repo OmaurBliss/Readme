@@ -20,7 +20,7 @@ const generateMD = (answers) =>
 // })
 
   `
-  # ${answers.name}
+  # TITLE: ${answers.name}
 
   ---
 
