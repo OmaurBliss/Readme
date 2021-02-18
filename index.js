@@ -26,23 +26,23 @@ const generateMD = (answers) =>
 
   # Table of contents
 
-  [Title](#--answersname-)
++ [Title](#--answersname-)
 
-[Description](#description)
++ [Description](#description)
 
-[Installation Instructions](#installation-instructions)
++ [Installation Instructions](#installation-instructions)
 
-[Usage](#usage)
++ [Usage](#usage)
 
 + [Screenshots of application](#screenshots-of-application)
 
-[Contributions](#contributions)
++ [Contributions](#contributions)
 
-[License](#license)
++ [License](#license)
 
-[Tests](#tests)
++ [Tests](#tests)
 
-[Questions](#questions)
++ [Questions](#questions)
 
   # Description
 
