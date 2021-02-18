@@ -4,23 +4,23 @@ const fs = require('fs');
 const generateMD = (answers) =>
 
   `
-  #${answers.name}
+  # ${answers.name}
 
   ---
-  #Description
+  # Description
 
   ${answers.description}
 
   ---
-  #Installation Instructions
+  # Installation Instructions
 
   ${answers.installation}
 
   ---
-  #Usage
+  # Usage
 
   ${answers.usage}
-  ######Screenshots of application
+  ###### Screenshots of application
 
   ![${answers.alttextone}](${answers.imagelinkone})
 
@@ -29,14 +29,32 @@ const generateMD = (answers) =>
   ![${answers.alttextthree}](${answers.imagelinkthree})
 
   ---
-  #Contributions
+  # Contributions
 
   ${answers.contributions}
 
   ---
-  #License
+  # License
 
   ${answers.license}
+
+  ---
+  # Tests
+
+  ${answers.text}
+
+  ---
+  # Questions
+
+  ${answers.contactquestions}
+
+  <${answers.email}>
+
+  <https://${answers.github}>
+
+
+
+
 
 
   `;
@@ -104,6 +122,11 @@ inquirer
       name: 'license',
       choices: ['MIT', 'ISC', 'MOZILLA', 'ARTISTIC LICENSE'],
     },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'What tests were performed on the application?',
+      },
     {
         type: 'input',
         name: 'email',
