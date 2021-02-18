@@ -3,20 +3,37 @@ const fs = require('fs');
 
 const generateMD = (answers) =>
 
+
+
   `
   # ${answers.name}
 
   ---
+
+  # Table of contents
+
+  [Title](#--answersname-)
+[Description](#description)
+[Installation Instructions](#installation-instructions)
+[Usage](#usage)
+          + [Screenshots of application](#screenshots-of-application)
+[Contributions](#contributions)
+[License](#license)
+[Tests](#tests)
+[Questions](#questions)
+
   # Description
 
   ${answers.description}
 
   ---
+
   # Installation Instructions
 
   ${answers.installation}
 
   ---
+
   # Usage
 
   ${answers.usage}
@@ -29,21 +46,25 @@ const generateMD = (answers) =>
   ![${answers.alttextthree}](${answers.imagelinkthree})
 
   ---
+
   # Contributions
 
   ${answers.contributions}
 
   ---
+
   # License
 
   ${answers.license}
 
   ---
+
   # Tests
 
   ${answers.text}
 
   ---
+
   # Questions
 
   ${answers.contactquestions}
@@ -51,11 +72,6 @@ const generateMD = (answers) =>
   <${answers.email}>
 
   <https://${answers.github}>
-
-
-
-
-
 
   `;
 
