@@ -1,16 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const licenseInput = ("./licenseInput")
 const generateMD = (answers) =>
-
-
 
   `
   ${answers.title}
-
- (./licenseInput)
-
-  ${licenseInput}
   
   ---
 
