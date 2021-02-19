@@ -1,56 +1,60 @@
 
-  # TITLE: Mickey Mouse
+  wutang
 
+ (./licenseInput)
+
+  ./licenseInput
+  
   ---
 
   # Table of contents
 
-  [Title](#--answersname-)
++ [Title](#--answersname-)
 
-[Description](#description)
++ [Description](#description)
 
-[Installation Instructions](#installation-instructions)
++ [Installation Instructions](#installation-instructions)
 
-[Usage](#usage)
++ [Usage](#usage)
 
 + [Screenshots of application](#screenshots-of-application)
 
-[Contributions](#contributions)
++ [Contributions](#contributions)
 
-[License](#license)
++ [License](#license)
 
-[Tests](#tests)
++ [Tests](#tests)
 
-[Questions](#questions)
++ [Questions](#questions)
 
   # Description
 
-  hamburgers and prayers 
+  lots
 
   ---
 
   # Installation Instructions
 
-  install carefully
+  carefully
 
   ---
 
   # Usage
 
-  with kid gloves
+  for good
   ###### Screenshots of application
 
-  ![cat with a hat](https://octodex.github.com/images/yaktocat.png)
+  ![yup]( https://camo.githubusercontent.com/d8f7abcee9fdb2cded758cbff3b0b3036d4a4641bf58f0cb221aa3d4c1b17d93/68747470733a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f79616b746f6361742e706e67)
 
-  ![cat with a hat 2](https://octodex.github.com/images/yaktocat.png)
+  ![who](https://camo.githubusercontent.com/d8f7abcee9fdb2cded758cbff3b0b3036d4a4641bf58f0cb221aa3d4c1b17d93/68747470733a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f79616b746f6361742e706e67)
 
-  ![cat with a hat 3](https://octodex.github.com/images/yaktocat.png)
+  ![yada](https://camo.githubusercontent.com/d8f7abcee9fdb2cded758cbff3b0b3036d4a4641bf58f0cb221aa3d4c1b17d93/68747470733a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f79616b746f6361742e706e67)
 
   ---
 
   # Contributions
 
-  my mama
+  me
 
   ---
 
@@ -62,16 +66,16 @@
 
   # Tests
 
-  dropped in water to see if it floats
+  yup
 
   ---
 
   # Questions
 
-  Holla at ya boi
+  nope
 
-  <omaurbliss@gmail.com>
+  <omaurbliss>
 
-  <https://https://github.com/OmaurBliss>
+  <https://OmaurBliss>
 
   
