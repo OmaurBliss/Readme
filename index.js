@@ -3,7 +3,7 @@ const fs = require("fs");
 const generateMD = (answers) =>
 
   `
-  ${answers.title}
+  # ${answers.title}
   
   ---
 
